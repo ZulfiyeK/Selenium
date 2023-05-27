@@ -1,4 +1,4 @@
-package techproed.day01_ilkTest;
+package techproed.day01_IlkTest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +24,8 @@ public class C02_DriverMethods {
         //System.out.println(driver.getPageSource());// butun kaynak kodlarini yazdirir. cok uzun oldugu icin simdilik yoruma alacagim.kaynak kodlarinda ...kod geciyor mu diye sorabilirler..if ile bakilabilir.
 
         System.out.println(driver.getWindowHandle());// 0B0FCE657CE8E7EEEF396CAAE5BAD5A9 ---gidilen sayfanin handle degerini(hashkod) verir. Bu handle degerini sayfalar arasi gecis icin kullaniliriz.
+        //gectigim sayfadaya geri donebilmek icin kullanilir.
+
 
 
 

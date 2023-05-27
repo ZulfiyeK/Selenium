@@ -1,4 +1,4 @@
-package techproed.day01_ilkTest;
+package techproed.day01_IlkTest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
