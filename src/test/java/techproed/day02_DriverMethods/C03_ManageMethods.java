@@ -33,7 +33,9 @@ public class C03_ManageMethods {
     webElementlere browser maximize olmadığı için ulaşamayabiliriz. Dolayısıyla browser'ı açtıktan sonra
     maximize yaparsak driver bütün webelementleri görür ve rahatlikla müdehale edebilir. Bu yüzden
     browser'ı açtıktan sonra ilk olarak driver.manage().window().maximize(); yapmamız bizim webelementlere
-    ulaşmada işimizi kolaylaştırır. Böylelikle fail almamış oluruz
+    ulaşmada işimizi kolaylaştırır. Böylelikle fail almamış oluruz.
+
+    Sayfanin icinde gordugumuz tum kutucuklar tum kisimlar birer web elementidir.Bunlarin butunu web sayfasini olusturur.
     */
 
         Thread.sleep(3000);
