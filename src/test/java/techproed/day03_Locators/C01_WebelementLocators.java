@@ -1,8 +1,16 @@
-package techproed.day03;
+package techproed.day03_Locators;
 
-public class C01 {
-    public static void main(String[] args) {
-     /* herhangi bir web elementine ulasabilmem icin bir adresinin olmasi gerekir.
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
+
+public class C01_WebelementLocators {
+
+     /*
+      herhangi bir web elementine ulasabilmem icin bir adresinin olmasi gerekir.
       otomasyonla bir web elemente mudahale edebilmem icin buranin adresi lazim.
       her bir web elementin kendine ozgu bir html adresleri vardir. bu adresler tag'lar ile gosterilir.
       <h1>, <a> , gibi taglar var, atritibutler ile sayfalara gidip bu web elementin hangi taga sahip ise atribut degereini alacagim
@@ -44,11 +52,70 @@ public class C01 {
         2.  findElemnt(Locator) Methodu icine parametre yazacagimiz locator'un  8 locatordan hangisi oldugunu belitmek icin locate bilgisi yazilir.
         driver.findElement(By.LocatorTuru("LocateBilgisi")
 
-        web ogesini tanimlamanin en kolay yolu id kullanmaktir cunku genellikle unique olur. 
-
-
-
+        web ogesini tanimlamanin en kolay yolu id kullanmaktir cunku genellikle unique olur.
 
       */
+
+
+    public static void main(String[] args) {
+        System.setProperty("chromeDriver","src/resources/drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+    //Amazon sayfasına gidelim
+        driver.get("https://www.amazon.com");
+
+    //Arama kutusunu locate edelim,Arama kutusuna iphone yazdıralım ve aratalım
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);//
+
+        /*
+         Bir webelementin Locat'ini birden fazla kullanacaksak bir Webelement'e degisken olarak atayabilirsiniz.
+         Webelement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox")); seklinde kullanabiliriz.
+
+        1. Locat islemi bittikten sonra eger Webelemen'e metin gondereceksek sendKeys() methodu kullaniriz.,
+        2. web elemente tiklayacaksak click() methodu kullaniriz.
+        3. webelementin uzerindeki yaziyi almak istiyorsak
+        4. sendKeys() methodundan sonra(yani webelement'e metin gonderdikten sonra) Keys.ENTER ile yada
+           submit() methodu ile manuel olarak enter yaptigimiz gibi otomasyonda da yapabiliriz.
+         */
+
+
+    //Sayfayı kapatalım
+        driver.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

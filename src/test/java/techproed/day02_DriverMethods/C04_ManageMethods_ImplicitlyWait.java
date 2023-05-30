@@ -15,7 +15,7 @@ public class C04_ManageMethods_ImplicitlyWait {
            ONEMLI
            implicitlyWait(Duration.ofSeconds(20) : sayfadaki webElemenlerini gorunur hale gelene kadar max 20 sn bekler.
            Eger 2 saniyede olusursa 2 saniye bekler ve alt satira gecer . Fakat belirttigimiz sure boyunca internetten
-           ya da sayfadan kaynakli webElementler olusmazsa testimiz "FAIL" verir.
+           ya da sayfadan kaynakli webElementler olusmazsa testimiz "FAIL" verir. bunu kodlarimiza baslamadan hemen yazmamiz gerekir.
 
            Thread.sleep() : java kodlarini bizim belirttigimiz sure kadar bekler. 30 saniye beklemesini belirtirsem
            30 saniye bekler ve alt satira gecer .
