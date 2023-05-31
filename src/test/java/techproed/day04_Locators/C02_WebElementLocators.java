@@ -38,20 +38,37 @@ public class C02_WebElementLocators {
                                                                     // oldugu icin bir list'e assign ettik.
        WebElement sonucYazisi= sonucYazilari.get(0);//listler indekslerle calisir ve ilk indeks 0'dir
         //System.out.println("sonucYazisi = " + sonucYazisi);//bu sekilde yazdirirsak bize hash kodunu veriri.WebElementler bu sekilde yazdirilmaz.
-        System.out.println("sonucYazisi = " + sonucYazisi.getText());//sonucYazisi = 10 results for "city bike"
+        System.out.println("sonucYazisi = " + sonucYazisi.getText());
 
         // sonuc sayısını yazdırın
         String sonusSayisi [] = sonucYazisi.getText().split(" ");//array'e assign ettik.
         System.out.println("sonusSayisi = " + Arrays.toString(sonusSayisi));//[10, results, for, "city, bike"]-burdan 10 sayisini almak istiyorum..0.ci indekstekini alacagim.
-        System.out.println("sonusSayisi[0] = " + sonusSayisi[0]);//sonusSayisi[0] = 10
+        System.out.println("sonusSayisi[0] = " + sonusSayisi[0]);// 10 sayisini elde etmeye calisiyorum.
 
 
         // ilk ürünün locatini alın
-        // ilk ürünün, görünür olup olmadıgını true, false seklinde yazdırın
+        List<WebElement> sonuclar =driver.findElements(By.className("s-image"));//burada 87 tane elemnt var bana ilk urun lazim.
+        WebElement ilkUrun = sonuclar.get(0);//unique hale getirmek icin ilk indeksteki web elementi bulmam gerekiyor.
+
+
+        // ilk ürünün, görünür olup olmadıgını true, false seklinde yazdırın.
+        System.out.println(ilkUrun.isDisplayed());// true- true yada false verecek.
+
+
         // ilk ürünün, erisilebilir olup olmadıgını true, false seklinde yazdırın
+        System.out.println(ilkUrun.isEnabled());//true
+
+
         // ilk ürünün, secilebilir olup olmadıgını true, false seklinde yazdırın
+        System.out.println(ilkUrun.isSelected());//false - radio buton ve checkbox gibi tik atilabilen yerlerde kullanilir. o yuzden false verecek.
+
+
         // ilk urune tıklayın
+        ilkUrun.click();
+
+
         // sayfayı kapatın
+        driver.close();
 
     }
 }

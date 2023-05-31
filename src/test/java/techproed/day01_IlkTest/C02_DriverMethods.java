@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class C02_DriverMethods {
     public static void main(String[] args) {
-        System.setProperty("chromDriver", " src/resources/drivers/chromedriver.exe");//yolumuzu olusturuyoruz.
+        System.setProperty("webdriver.chrome.driver", " src/resources/drivers/chromedriver.exe");//yolumuzu olusturuyoruz.
         WebDriver driver = new ChromeDriver();
         driver.get("https://amazon.com");
         System.out.println("Son girilen sayfanin basligi==>"+driver.getTitle());//Amazon.com. Spend less. Smile more.

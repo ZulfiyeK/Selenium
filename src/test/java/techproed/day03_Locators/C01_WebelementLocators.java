@@ -58,7 +58,7 @@ public class C01_WebelementLocators {
 
 
     public static void main(String[] args) {
-        System.setProperty("chromeDriver","src/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -82,7 +82,8 @@ public class C01_WebelementLocators {
 
 
     //Sayfayı kapatalım
-        driver.close();
+
+       // driver.close();
 
 
 

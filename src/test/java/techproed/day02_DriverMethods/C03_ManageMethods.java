@@ -14,7 +14,7 @@ public class C03_ManageMethods {
         3.getPosition() kordinatlarini, sayfanin ilk acildiginda ki boyutunu verir.setPosition ile de ekranda istedigimiz yere tasiyabiliriz.
         3.getSize() brovser'in olculerini veriri.
 */
-        System.setProperty("chromDriver", " src/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", " src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         //Browser'in konumunu yazdiralim
