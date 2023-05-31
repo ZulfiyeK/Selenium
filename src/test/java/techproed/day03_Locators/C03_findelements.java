@@ -10,57 +10,49 @@ import java.util.List;
 
 public class C03_findelements {
     public static void main(String[] args) {
-        System.setProperty("chromeDriver","src/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //Amazon sayfasına gidelim
+        driver.get("https://amazon.com");
 
-        //mamazon sayfasina gidelim
-        driver.get("https://www.amazon.com");
-
-        //sayfadaki linklerin sayisini ve linkleri yazdiralim.
-
+        //Sayfadaki linklerin sayısını ve linkleri yazdıralım
         /*
-        findelement methodu ile bir webelemente ulasirken, birden fazla webelement icin findelements() methosunu kullaniriz.
-        Bu web elementlerin sayisina ulasabilmek icin ya da bu webelementlerin yazisini konsola yazdirabilmek icin
-        List<Webelement> LinklerListesi = driver.findelements(By.locator("locator degeri") olarak kullaniriz.
-        Olusturmus oldugumuz list'i loop ile konsola yazdirabiliriz.
-        */
-
-
+        findelement ile bir webelemente ulaşabilirken, birden fazla webelement için findelements() methodunu
+        kullanırız.Bu webelementlerin sayısına ulaşmak için yada bu webelementlerin yazısını konsola yazdırabilmek için
+        List<Webelemet> linklerListesi = driver.findElements(By.locator("locator değeri")) olarak kullanırız.
+        Oluşturmuş olduğumuz list'i loop ile konsola yazdırabiliriz
+         */
         List<WebElement> linklerListesi = driver.findElements(By.tagName("a"));
-        System.out.println("linklerListesi = " + linklerListesi.size());
+        System.out.println("Linklerin Sayısı = " + linklerListesi.size());
         /*
-        for (WebElement w :linklerListesi) {
-            if(!w.getText().isEmpty()) {//yazisi olmayan linkleri getirmesin diye if kodu yazdik.
-                System.out.println(w.getText());
-         }}
+                for (WebElement w:linklerListesi) {
+                    if (!w.getText().isEmpty()){
+                        System.out.println(w.getText());
+                    }
+                }
          */
 
-        //lambda ile yazdiralim
+        //Lambda ile yazdıralım
         linklerListesi.forEach(link -> {if (!link.getText().isEmpty())
         {System.out.println(link.getText());}});
 
-        //hop deals in Electronics webelementinin yazisini yazdiralim
+
+        //Shop deals in Electronics webElementinin yazısını yazdıralım
         System.out.println("**********************************************************");
-        System.out.println(driver.findElement(By.linkText("nav-link-accountList-nav-line-1")).getText());
-        WebElement webElementYazisi = driver.findElement((By.id("nav-link-accountList-nav-line-1")));
+        System.out.println(driver.findElement(By.id("nav-link-accountList-nav-line-1")).getText());
+        WebElement webElementYazisi = driver.findElement(By.id("nav-link-accountList-nav-line-1"));
         System.out.println(webElementYazisi.getText());
-        //webelementin uzerindeki yaziyi almak istiyorsak getText() methodu kullaniriz.
+        //webelementin üzerindeki yazıyı almak istiyorsak getText() methodunu kullanırız
+
 
         driver.close();
 
+    }
+    //-ÖDEV-
     //Amazon sayfasına gidiniz
     //iphone aratınız
     //çıkan sonuç yazısını konsola yazdırınız
     //çıkan ürünlerden ilk 5 tanesine tıklayıp sayfa başlıklarını yazdırınız
-
-
-
-
-
-
-
-
-    }
 }

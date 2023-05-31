@@ -33,7 +33,7 @@ public class C01_WebelementLocators {
     bunlara ulasilamayan web elemnetler icin ozel olarak tanimlanan Xpath ve css locator'lari kullanilir.
 
     8 tane locator vardir.
-        1.id,
+        1. id,
         2. name,
         3. className,
         4. tagName,
