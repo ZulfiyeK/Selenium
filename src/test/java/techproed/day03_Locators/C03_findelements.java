@@ -50,9 +50,5 @@ public class C03_findelements {
         driver.close();
 
     }
-    //-ÖDEV-
-    //Amazon sayfasına gidiniz
-    //iphone aratınız
-    //çıkan sonuç yazısını konsola yazdırınız
-    //çıkan ürünlerden ilk 5 tanesine tıklayıp sayfa başlıklarını yazdırınız
+
 }
