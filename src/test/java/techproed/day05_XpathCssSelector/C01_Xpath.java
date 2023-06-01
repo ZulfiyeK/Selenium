@@ -68,7 +68,7 @@ iki cesit xpath vardir.
 
 
         // arama kutusuna "city bike"  yazıp aratın
-                //once arqaqama kutusunun locate'ini almam lazim
+        //once arqaqama kutusunun locate'ini almam lazim
         //1. yol- id = twotabsearchtextbox attribute'i ile arama
         // WebElement aramaKutusu = driver.findElement((By.xpath("//input[@id='twotabsearchtextbox']")));//locate aldik, id olmasaydi baska bir attribute'yi kullanabilirdik.
         //  aramaKutusu.sendKeys("city bike "+ Keys.ENTER);
